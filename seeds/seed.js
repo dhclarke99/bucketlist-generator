@@ -1,8 +1,9 @@
 const sequelize = require('../config/connection');
-const { User } = require('../models');
+const { User, BucketList } = require('../models');
 
 const userData = require('./userData.json');
-// const postData = require('./postData.json');
+const bucketListData = require('./bucketListData.json')
+
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
@@ -12,6 +13,10 @@ const seedDatabase = async () => {
     returning: true,
   });
 
+  const bucketlist = await BucketList.bulkCreate(bucketListData, {
+    individualHooks: true,
+    returning: true,
+  });
   // for (const post of postData) {
   //   await Post.create({
   //     ...post,
