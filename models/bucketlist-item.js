@@ -22,13 +22,20 @@ BucketListItem.init(
       allowNull: false,
       unique: false,
     },
-    bucketList_id: {
+    bucket_list_id: {
       type: DataTypes.INTEGER,
       references: {
         model: 'bucketList',
         key: 'id',
       },
     },
+    user_id: {
+      type: DataTypes.INTEGER,
+      references: {
+          model: 'user',
+          key: 'id',
+      },
+  },
    
   },
   {
