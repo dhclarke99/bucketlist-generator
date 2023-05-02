@@ -1,16 +1,19 @@
 const router = require('express').Router();
-const { User } = require('../../models');
+const { BucketList, BucketListItem } = require('../../models');
+const withAuth = require('../../utils/auth');
 
-// *Checking get User as a test NOT for users to do**
+// *Get all posts
 router.get('/', async (req, res) => {
     try {
-      const userData = await User.findAll();
+      const bucketListData = await BucketList.findAll({
+        include: [{model:BucketListItem}],
+      });
   
     //   req.session.save(() => {
     //     req.session.user_id = userData.id;
     //     req.session.logged_in = true;
   
-        res.status(200).json(userData);
+        res.status(200).json(bucketListData);
     //   });
     } catch (err) {
       res.status(400).json(err);
@@ -18,21 +21,20 @@ router.get('/', async (req, res) => {
   });
 
 
-// *Creating a new username/pw
-router.post('/', async (req, res) => {
+// *Posting a post
+router.post('/', withAuth, async (req, res) => {
   try {
-    const userData = await User.create(req.body);
-
-    req.session.save(() => {
-      req.session.user_id = userData.id;
-      req.session.logged_in = true;
-
-      res.status(200).json(userData);
+    const bucketListData = await BucketList.create({
+      ...req.body,
+      user_id: req.session.user_id,
     });
+
+    res.status(200).json(bucketListData);
   } catch (err) {
     res.status(400).json(err);
   }
 });
+
 
 router.post('/login', async (req, res) => {
   try {
@@ -66,7 +68,6 @@ router.post('/login', async (req, res) => {
   }
 });
 
-// *Logging out
 router.post('/logout', (req, res) => {
   if (req.session.logged_in) {
     req.session.destroy(() => {

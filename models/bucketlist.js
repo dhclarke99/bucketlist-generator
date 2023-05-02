@@ -13,10 +13,7 @@ BucketList.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    bucketListItem_id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-    },
+    
     user_id: {
         type: DataTypes.INTEGER,
         references: {
@@ -24,6 +21,11 @@ BucketList.init(
             key: 'id',
         },
     },
+    title: {
+      type: DataTypes.TEXT,
+      allowNull: false,
+    }
+    
   },
   {
     sequelize,

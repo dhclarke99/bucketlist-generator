@@ -1,0 +1,14 @@
+[
+  {
+    "user_id": 1,
+    "title": "My first Bucket List"
+  },
+  {
+    "user_id": 2,
+    "title": "It's my bucket list!"
+  },
+  {
+    "user_id": 3,
+    "title": "I'm the third guy with a list"
+  }
+]
