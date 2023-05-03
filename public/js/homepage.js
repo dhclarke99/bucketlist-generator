@@ -1,7 +1,8 @@
 
 
 const apiCall = async () => {
-    g4eBJJ1vStCoSNn4Hn+3Qg==dciOZWtnf9XNVu4g{
+    console.log("click")
+    fetch('/', {
         method: 'GET',
         url: 'https://api.api-ninjas.com/v1/bucketlist',
         headers: { 'X-Api-Key': 'g4eBJJ1vStCoSNn4Hn+3Qg==dciOZWtnf9XNVu4g'},
@@ -9,10 +10,12 @@ const apiCall = async () => {
         success: function(result) {
             console.log(result);
         },
+        
         error: function ajaxError(jqXHR) {
             console.error('Error: ', jqXHR.responseText);
         }
     });
+    console.log(result)
 };
 
 
