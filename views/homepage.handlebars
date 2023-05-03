@@ -7,9 +7,10 @@
 <div class="row mt-4">
   <div class="col-md-6">
     <div class="container">
+      {{#each listData as |List| }}
         <div id="BucketList">
                 <button type ="travel-lock" class="btn btn-primary">Travel</button>
-                <ul id="travel-list"></ul>
+                <ul id="travel-list">{{List.title}}</ul>
                 <br>
                  <button type ="travel-lock" class="btn btn-primary">Food</button>
                 <ul id ="food=list"></ul>
@@ -18,6 +19,8 @@
                 <ul id ="adrenaline-list"></ul>
                 <br>
         <div>
+      {{/each}}
+
         <button type="submit" class="btn btn-primary">Clear</button>
          <button type="save" class="btn btn-primary">Save</button>
           <button type="email" class="btn btn-primary">Email</button>
