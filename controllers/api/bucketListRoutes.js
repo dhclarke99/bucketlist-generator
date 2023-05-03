@@ -1,8 +1,8 @@
 const router = require('express').Router();
-const { BucketList, BucketListItem } = require('../../models');
+const { BucketList, BucketListItem, User } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-// *Get all posts
+// *Get all lists
 router.get('/', async (req, res) => {
     try {
       const bucketListData = await BucketList.findAll({
@@ -17,6 +17,27 @@ router.get('/', async (req, res) => {
     //   });
     } catch (err) {
       res.status(400).json(err);
+    }
+  });
+
+// *Get all lists by user_id
+  router.get('/:id', withAuth, async (req, res) => {
+    try {
+      const bucketListData = await User.findByPk({
+       
+        include: [{model: BucketList}],
+      });
+      
+  
+      if (!bucketListData) {
+        res.status(404).json({ message: 'No list found with this id!' });
+        return;
+      }
+  
+      res.status(200).json(bucketListData);
+    } catch (err) {
+      console.log(err)
+      res.status(500).json(err);
     }
   });
 
