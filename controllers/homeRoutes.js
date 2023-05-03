@@ -17,11 +17,12 @@ router.get('/', async (req, res) => {
   
     
     // Pass serialized data and session flag into template
+    const listData = bucketListData.map((list) => list.get({ plain: true }));
     res.render('homepage', { 
-    //   projects, 
+      listData, 
     //   logged_in: req.session.logged_in 
     });
-    res.status(200).json(bucketListData);
+    // res.status(200).json(bucketListData);
   } catch (err) {
     res.status(400).json(err);
   }
