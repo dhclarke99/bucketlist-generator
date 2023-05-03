@@ -4,26 +4,26 @@ const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
   try {
-    // Get all projects and JOIN with user data
-    // const projectData = await Project.findAll({
-    //   include: [
-    //     {
-    //       model: User,
-    //       attributes: ['name'],
-    //     },
-    //   ],
-    // });
+    const bucketListData = await BucketList.findAll({
+      include: [{model:BucketListItem}],
+    });
 
-    // // Serialize data so the template can read it
-    // const projects = projectData.map((project) => project.get({ plain: true }));
+  //   req.session.save(() => {
+  //     req.session.user_id = userData.id;
+  //     req.session.logged_in = true;
 
+      
+  //   });
+  
+    
     // Pass serialized data and session flag into template
     res.render('homepage', { 
     //   projects, 
     //   logged_in: req.session.logged_in 
     });
+    res.status(200).json(bucketListData);
   } catch (err) {
-    res.status(500).json(err);
+    res.status(400).json(err);
   }
 });
 
