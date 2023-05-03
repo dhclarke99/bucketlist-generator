@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Project, User } = require('../models');
+const { BucketList, User, BucketListItem } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
@@ -27,24 +27,32 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/project/:id', async (req, res) => {
+router.get('/profile',  withAuth, async (req, res) => {
   try {
-    const projectData = await Project.findByPk(req.params.id, {
+    const userData = await User.findByPk(req.session.user_id);
+
+    const bucketListData = await BucketList.findAll( {
+      where: {
+        user_id: req.session.user_id,
+      },
       include: [
         {
-          model: User,
-          attributes: ['name'],
-        },
+          model: BucketListItem,
+        }
       ],
     });
 
-    const project = projectData.get({ plain: true });
 
-    res.render('project', {
-      ...project,
+    const user = userData.get({ plain: true });
+    const bucketLists = bucketListData.map(list => list.get({plain: true}))
+
+    res.render('profile',  {
+      ...user,
+      bucketLists,
       logged_in: req.session.logged_in
     });
   } catch (err) {
+    console.log(err)
     res.status(500).json(err);
   }
 });
