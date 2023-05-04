@@ -7,42 +7,46 @@
       </div>
       </div>
 {{#each listData as |List| }}
-{{!-- {{#each List.bucketListItems as |Item| }} --}}
-
-
 <br>
-
-      <div class="card2">
+<div class=container>
+      <div class=card2>
       <div id="BucketList">
-        <h4>{{List.title}}</h4>
-
-        <button type="travel-lock" class="btn btn-primary">Travel</button>
+        <h2>{{List.title}}</h2>
+        <section>
+        <h3>Travel</h3>
         {{#each List.bucketListItems as |item| }}
         {{#if (ifCond item.category "travel")}}
+        </section>
+         <section>
         <ul id="travel-list">{{item.body}}</ul>
         {{/if}}
         {{/each}}
-
-
+        </section>
         <br>
-        <button type="travel-lock" class="btn btn-primary">Food</button>
+        <section>
+        <h3>Food</h3>
         {{#each List.bucketListItems as |item| }}
         {{#if (ifCond item.category "food")}}
+        </section>
+        <section>
         <ul id="food-list">{{item.body}}</ul>
         {{/if}}
         {{/each}}
-        {{!-- {{#if (ifCond item.category "food")}}
-        <li>{{item.body}}</li>
-        {{/if}} --}}
+         </section>
+        <section>
         <br>
-        <button type="travel-lock" class="btn btn-primary">Adrenaline</button>
+        <h3>Adrenaline</h3>
         {{#each List.bucketListItems as |item| }}
         {{#if (ifCond item.category "adrenaline")}}
+        </section>
+        <section class=summary>
         <ul id="adrenaline-list">{{item.body}}</ul>
         {{/if}}
         {{/each}}
+        </section>
         {{!-- {{#if (ifCond item.category "adrenaline")}}
         <li>{{item.body}}</li> --}}
+        </div>
         </div>
         </div>
         <br>

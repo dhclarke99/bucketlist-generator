@@ -5,23 +5,15 @@ h1{
    font-family: 'Bruno Ace', cursive;
    text-shadow: 3px 3px 5px rgb(141, 139, 139);
 }
-.card1{
-   border-color:#5087ed;
-   border-style: solid;
-   border-radius: 10px;
-   display:flex;
-   justify-content: center;
-}
-.card2{
-   border-color:#5087ed;
-   border-style: solid;
-   border-radius: 10px;
-   display:flex;
-   justify-content: center;
-   padding-top: 10px;
-}
 h2{
+   color: #edea50;
    text-align: center;
+   text-shadow: 2px 2px 3px rgb(141, 139, 139);
+}
+h3{
+   color: #5087ed;
+   text-align: center;
+   text-shadow: 2px 2px 3px rgb(141, 139, 139);
 }
 h4{
    color: #5087ed;
@@ -38,10 +30,25 @@ main{
    padding: none;
 
 }
-
-
 ul{
-   text-align: center;
-   padding: none;
+   padding:none;
+   margin: none;
 }
+.card1{
+   border-color:#5087ed;
+   border-style: solid;
+   border-radius: 10px;
+   display:flex;
+   justify-content: center;
+   padding: 10px;
 
+}
+.card2{
+   border-color:#5087ed;
+   border-style: solid;
+   border-radius: 10px;
+   display: flex;
+   text-align: center;
+   justify-content: center;
+   padding: 10px;
+}
