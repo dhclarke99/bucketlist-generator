@@ -1,3 +1,6 @@
+const listGenerator = document.querySelector('#list-generator');
+  const landingPage = document.querySelector('#landing-page');
+
 const createList = async (event) => {
 const title = document.querySelector('#title-create').textContent;
   const response = await fetch('/api/bucketlists', {
@@ -7,6 +10,7 @@ const title = document.querySelector('#title-create').textContent;
   });
   console.log(json.stringify({title}))
   if (response.ok) {
+    listGenerator.setAttribute("style", "visibility:visible");
     console.log("response worked")
     // If successful, redirect the browser to the profile page
     // document.location.replace('/profile');
@@ -23,10 +27,9 @@ const title = document.querySelector('#title-create').textContent;
 const showPage = async (event) => {
   event.preventDefault();
   console.log("click")
-  const listGenerator = document.querySelector('#list-generator');
-  const landingPage = document.querySelector('#landing-page');
+  console.log(listGenerator)
 
-  if (listGenerator.getAttribute("style") === hidden) {
+  if (listGenerator.getAttribute("style") === "visibility:hidden") {
     createList()
   } else {
     return
