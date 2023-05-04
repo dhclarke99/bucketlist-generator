@@ -14,7 +14,7 @@ BucketList.hasMany(BucketListItem, {
   });
 BucketListItem.belongsTo(BucketList,{
   foreignKey: 'bucket_list_id',
-  // through: 'bucketListItem_id'
+ 
 });
 
 
