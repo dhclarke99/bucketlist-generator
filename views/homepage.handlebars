@@ -1,6 +1,11 @@
+
 {{log this}}
+<button type="generate-lock" class="btn btn-outline-success" id="generate">Generate</button>
+      <ul id="generate"></ul>
 {{#each listData as |List| }}
 {{!-- {{#each List.bucketListItems as |Item| }} --}}
+
+
 <br>
     <div class="container">
 
@@ -35,20 +40,10 @@
         {{!-- {{#if (ifCond item.category "adrenaline")}}
         <li>{{item.body}}</li> --}}
         <br>
-        {{!-- {{/if}}
-        {{/each}} --}
-          <br>
-          {{!-- {{/each}} --}}
           {{/each}}
           <button type="register" class="btn btn-primary">Login</button>
         </div>
       </div>
       <br>
-      <button type="generate-lock" class="btn btn-outline-success" id="generate">Generate</button>
-      <ul id="travel-list"></ul>
-    </div>
-  </div>
-
-
-
+      
   <script src="./js/homepage.js"></script>
