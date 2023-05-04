@@ -9,10 +9,13 @@ router.get('/', async (req, res) => {
     });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2c1d6c170b5354188c0366872c8a43dff9debe08
     // Pass serialized data and session flag into template
     const listData = bucketListData.map((list) => list.get({ plain: true }));
-  
 
+<<<<<<< HEAD
     
 =======
      
@@ -20,6 +23,8 @@ router.get('/', async (req, res) => {
     const listData = bucketListData.map((list) => list.get({ plain: true }));
     console.log(listData);
 >>>>>>> 40a06aad58d6081ed6be414a029fcfca5fde5610
+=======
+>>>>>>> 2c1d6c170b5354188c0366872c8a43dff9debe08
     res.render('homepage', { 
       listData
     
