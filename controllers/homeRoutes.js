@@ -41,6 +41,7 @@ router.get('/profile',  withAuth, async (req, res) => {
 
     const user = userData.get({ plain: true });
     const bucketLists = bucketListData.map(list => list.get({plain: true}))
+    // console.log(bucketLists)
 
     res.render('profile',  {
       ...user,

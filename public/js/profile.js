@@ -25,11 +25,12 @@ const travelCategory = async (event) => {
     if (response.ok) {
       // If successful, redirect the browser to the profile page
       document.location.replace('/profile');
-      const createList = await fetch('/api/bucketlists', {
-        method: 'POST',
-        body: JSON.stringify({ email, password }),
+      const getLists = await fetch('/profile', {
+        method: 'GET',
+        // body: JSON.stringify({ email, password }),
         headers: { 'Content-Type': 'application/json' },
       });
+      console.log(getLists)
     } else {
       console.log("error")
       alert(response.statusText);
