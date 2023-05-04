@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "body": "Can't wait to try me some rocky mountain oysters!",
+    "category": "food",
+    "bucket_list_id": 1
+  },
+  {
+    "id": 2,
+    "body": "Travel to beautiful Camden, NJ!",
+    "category": "travel",
+    "bucket_list_id": 2
+  },
+  {
+    "id": 3,
+    "body": "Bungie Jump",
+    "category": "adrenaline",
+    "bucket_list_id": 3
+  }
+]
