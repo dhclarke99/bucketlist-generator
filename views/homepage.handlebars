@@ -1,19 +1,18 @@
 {{log this}}
-<div class=container>
 <div class=card1>
 <br>
-      <button type="generate-lock" class="btn btn-outline-success" id="generate">Generate</button>
+      <button type="generate-lock" class="btn btn-success" id="generate">Generate</button>
       <div id="generatedItem"></div>
       </div>
-      </div>
+      
 {{#each listData as |List| }}
 <br>
-<div class=container>
+
       <div class=card2>
       <div id="BucketList">
         <h2>{{List.title}}</h2>
         <section>
-        <h3>Travel</h3>
+        <h3>Travel<h3>
         {{#each List.bucketListItems as |item| }}
         {{#if (ifCond item.category "travel")}}
         </section>
@@ -27,23 +26,20 @@
         <h3>Food</h3>
         {{#each List.bucketListItems as |item| }}
         {{#if (ifCond item.category "food")}}
-        </section>
+        
         <section>
         <ul id="food-list">{{item.body}}</ul>
         {{/if}}
         {{/each}}
-         </section>
-        <section>
+      
+        </section>
         <br>
         <h3>Adrenaline</h3>
         {{#each List.bucketListItems as |item| }}
         {{#if (ifCond item.category "adrenaline")}}
-        </section>
-        <section class=summary>
         <ul id="adrenaline-list">{{item.body}}</ul>
         {{/if}}
         {{/each}}
-        </section>
         {{!-- {{#if (ifCond item.category "adrenaline")}}
         <li>{{item.body}}</li> --}}
         </div>
@@ -51,6 +47,8 @@
         </div>
         <br>
           {{/each}}
+          <div class="containerL">
+        <div class="card3">
           <a href="/login">
           <button type="register" class="btn btn-primary">Login</button>
           </a>
@@ -58,7 +56,8 @@
           <button type="register" class="btn btn-primary">View Profile</button>
           </a>
         </div>
-
-      </div>
+        </section>
+</div>
+  
      
   <script src="./js/homepage.js"></script>

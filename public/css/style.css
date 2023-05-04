@@ -26,19 +26,27 @@ i{
    font-size: 50px;
    text-shadow: 3px 3px 5px rgb(141, 139, 139);
 }
-main{
-   padding: none;
-
+p{
+   text-align: center;
 }
-ul{
-   padding:none;
-   margin: none;
+.loginS{
+   color: #5087ed;
+   text-align: center;
+   text-shadow: 2px 2px 3px rgb(141, 139, 139);
+}
+.loginL{
+   color: #5087ed;
+   text-align: center;
+   text-shadow: 2px 2px 3px rgb(141, 139, 139);
+   margin-top: 10px;
+   margin-bottom: 25px;
 }
 .card1{
    border-color:#5087ed;
    border-style: solid;
    border-radius: 10px;
    display:flex;
+   align-content: space-evenly;
    justify-content: center;
    padding: 10px;
 
@@ -51,4 +59,80 @@ ul{
    text-align: center;
    justify-content: center;
    padding: 10px;
+}
+.card3{
+   border-color:#5087ed;
+   border-style: solid;
+   border-radius: 10px;
+   display:flex;
+   align-content: space-evenly;
+   justify-content: center;
+   padding: 10px;
+
+}
+.card4{
+   border-color:#5087ed;
+   border-style: solid;
+   border-radius: 10px;
+   display:flex;
+   justify-content:center;
+   padding: 10px;
+}
+.card5{
+   border-color:#5087ed;
+   border-style: solid;
+   border-radius: 10px;
+   display:flex;
+   justify-content:center;
+   padding: 10px;
+}
+.card6{
+   border-color:#5087ed;
+   border-style: solid;
+   border-radius: 10px;
+   display:flex;
+   justify-content:center;
+   padding: 10px;
+}
+.form.signup-form{
+   margin-top: 10px;
+}
+.bucket-list-login-form{
+   margin-top: 10px;   
+
+}
+.form-group{
+   display:flex;
+   justify-content:center;
+}
+.container4{
+   padding: 0;
+}
+
+.btn-primary{
+   margin-left:30px;
+   margin-right:30px;
+}
+.form-group1{
+   margin-left: 28px;
+}
+.form-group2{
+   margin-left: 28px;
+}
+.btn.btn-primary{
+   margin-left: 105px;
+}
+#landing-page{
+   display:flex;
+   justify-content:center;
+}
+#create{
+   margin-left:0px
+}
+#logout{
+   margin-left:20px
+   
+}
+#profile-generate{
+   margin-left: 50px;
 }
