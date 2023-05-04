@@ -1,16 +1,18 @@
-
 {{log this}}
+<div class=container>
+<div class=card1>
 <br>
       <button type="generate-lock" class="btn btn-outline-success" id="generate">Generate</button>
       <div id="generatedItem"></div>
+      </div>
+      </div>
 {{#each listData as |List| }}
 {{!-- {{#each List.bucketListItems as |Item| }} --}}
 
 
 <br>
-    <div class="container">
 
-
+      <div class="card2">
       <div id="BucketList">
         <h4>{{List.title}}</h4>
 
@@ -41,6 +43,8 @@
         {{/each}}
         {{!-- {{#if (ifCond item.category "adrenaline")}}
         <li>{{item.body}}</li> --}}
+        </div>
+        </div>
         <br>
           {{/each}}
           <a href="/login">
