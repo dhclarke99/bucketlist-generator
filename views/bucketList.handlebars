@@ -15,7 +15,7 @@
         <div id="BucketList">
           <h4>{{title}}</h4>
                               
-                <button type ="travel-lock" class="btn btn-primary">Travel</button>
+                <button type ="travel-lock" class="btn btn-primary" id="travel">Travel</button>
                 {{#each bucketListItems as |item| }}  
                 {{#if (ifCond item.category "travel")}}
                 <ul id="travel-list">{{item.body}}</ul>
@@ -24,7 +24,7 @@
                 
                 
                 <br>
-                <button type ="travel-lock" class="btn btn-primary">Food</button>
+                <button type ="travel-lock" class="btn btn-primary" id="food">Food</button>
                 {{#each bucketListItems as |item| }}  
                 {{#if (ifCond item.category "food")}}
                 <ul id ="food-list">{{item.body}}</ul>
@@ -34,7 +34,7 @@
                 <li>{{item.body}}</li>
                 {{/if}} --}}
                 <br> 
-                <button type ="travel-lock" class="btn btn-primary">Adrenaline</button>
+                <button type ="travel-lock" class="btn btn-primary" id="adrenaline">Adrenaline</button>
                 {{#each bucketListItems as |item| }}  
                 {{#if (ifCond item.category "adrenaline")}}
                 <ul id ="adrenaline-list">{{item.body}}</ul>
@@ -65,4 +65,4 @@
 
  
 
-<script src="./js/bucketList.js"></script>
+<script src="../js/bucketlist.js"></script>

@@ -13,6 +13,7 @@ console.log(title)
   if (response.ok) {
     listGenerator.setAttribute("style", "visibility:visible");
     console.log("response worked")
+     document.location.replace('/profile');
     // If successful, redirect the browser to the profile page
     // document.location.replace('/profile');
     // const getLists = await fetch('/profile', {
@@ -30,13 +31,9 @@ const showPage = async (event) => {
   console.log("click")
   console.log(listGenerator)
 
-  if (listGenerator.getAttribute("style") === "visibility:hidden") {
+  
     createList()
-  } else {
-    return
-  }
-
-}
+};
 
 
 
