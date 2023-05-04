@@ -12,8 +12,8 @@ const apiCall = async () => {
     const data = await response.json();
     console.log(data.item);
   
-    const listContainer = document.querySelector('#container');
-  
+    const listContainer = document.querySelector("#generatedItem");
+    console.log(listContainer);
     // Check if a child element exists
     if (listContainer.querySelector('h2')) {
         listContainer.querySelector('h2').textContent = data.item;
