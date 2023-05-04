@@ -6,7 +6,7 @@
 <div id="list-generator" >
   <div class="column">
     <div class="col-auto">
-      <h4>{{name}}'s Bucket List!</h4>
+      <h3>{{name}}'s Bucket Lists:</h3>
     </div>
   </div>
 {{#each bucketLists as |list|}}
@@ -14,33 +14,15 @@
 <p>{{list.title}}</p>
 </a>
 {{/each}}
-  <div class="row mt-4">
-    <div class="col-md-6">
-      <div class="container">
-        <div id="profile-BucketList">
-          <button type="travel-lock" class="btn btn-primary" id="travel">Travel</button>
-          <ul id="travel-list"></ul>
-          <br>
-          <button type="travel-lock" class="btn btn-primary" id="food">Food</button>
-          <ul id="food-list"></ul>
-          <br>
-          <button type="travel-lock" class="btn btn-primary" id="adrenaline">Adrenaline</button>
-          <ul id="adrenaline-list"></ul>
-          <br>
-          <div>
-            <button type="submit" class="btn btn-primary">Create</button>
-            <button type="save" class="btn btn-primary">Save</button>
-            <button type="email" class="btn btn-primary">Email</button>
-
+  
+            
           </div>
           <div>
             <button type="submit" class="btn btn-primary" id="logout">Logout</button>
           </div>
           <div id="profile-container">
             <br>
-            <button type="generate-lock" class="btn btn-primary" id="profile-generate">Generate</button>
-            <ul id="travel-list"></ul>
-          </div>
+            </div>
           <div>
             <a href="/">
           <button type="generate-lock" class="btn btn-primary" id="profile-generate">Return Home</button>
