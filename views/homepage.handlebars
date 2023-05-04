@@ -9,15 +9,27 @@
     <div class="container">
       {{#each listData as |List| }}
         <div id="BucketList">
+          <h4>{{List.title}}</h4>
+                {{#each List.bucketListItems as |item| }}                
                 <button type ="travel-lock" class="btn btn-primary">Travel</button>
-                <ul id="travel-list">{{List.title}}</ul>
+                <ul id="travel-list"></ul>
+                {{#if (ifCond item.category "travel")}}
+                <li>{{item.body}}</li>
+                {{/if}}
                 <br>
-                 <button type ="travel-lock" class="btn btn-primary">Food</button>
-                <ul id ="food=list"></ul>
+                <button type ="travel-lock" class="btn btn-primary">Food</button>
+                <ul id ="food-list"></ul>
+                {{#if (ifCond item.category "food")}}
+                <li>{{item.body}}</li>
+                {{/if}}
                 <br> 
                 <button type ="travel-lock" class="btn btn-primary">Adrenaline</button>
                 <ul id ="adrenaline-list"></ul>
+                {{#if (ifCond item.category "adrenaline")}}
+                <li>{{item.body}}</li>
                 <br>
+                {{/if}}
+                {{/each}}                
         <div>
       {{/each}}
 

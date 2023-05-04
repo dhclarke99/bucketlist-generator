@@ -5,19 +5,13 @@ const withAuth = require('../utils/auth');
 router.get('/', async (req, res) => {
   try {
     const bucketListData = await BucketList.findAll({
-      include: [{model:BucketListItem}],
+      include: [{model:BucketListItem}], 
     });
 
-  //   req.session.save(() => {
-  //     req.session.user_id = userData.id;
-  //     req.session.logged_in = true;
-
-      
-  //   });
-  
-    
+     
     // Pass serialized data and session flag into template
     const listData = bucketListData.map((list) => list.get({ plain: true }));
+    console.log(listData);
     res.render('homepage', { 
       listData, 
     //   logged_in: req.session.logged_in 
