@@ -9,13 +9,28 @@
       <h3>{{name}}'s Bucket Lists:</h3>
     </div>
   </div>
-{{#each bucketLists as |list|}}
+  {{#each bucketLists as |list|}}
 <a href="/bucketlist/{{list.id}}">
 <p>{{list.title}}</p>
 </a>
 {{/each}}
-  
-            
+
+      <div class="container">
+        <div id="profile-BucketList">
+          <button type="travel-lock" class="btn btn-primary" id="travel">Travel</button>
+          <ul id="travel-list"></ul>
+          <br>
+          <button type="travel-lock" class="btn btn-primary" id="food">Food</button>
+          <ul id="food-list"></ul>
+          <br>
+          <button type="travel-lock" class="btn btn-primary" id="adrenaline">Adrenaline</button>
+          <ul id="adrenaline-list"></ul>
+          <br>
+          <div>
+            <button type="submit" class="btn btn-primary">Create</button>
+            <button type="save" class="btn btn-primary">Save</button>
+            <button type="email" class="btn btn-primary">Email</button>
+
           </div>
           <div>
             <button type="submit" class="btn btn-primary" id="logout">Logout</button>

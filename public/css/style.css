@@ -1,0 +1,25 @@
+header{
+   bg-dark:
+}
+h1{ 
+   color: #5087ed;
+   text-align: center;
+   font-size: 50px;
+   font-family: 'Bruno Ace', cursive;
+   text-shadow: 3px 3px 5px rgb(141, 139, 139);
+}
+i{
+   text-align: center;
+   font-size: 50px;
+   text-shadow: 3px 3px 5px rgb(141, 139, 139);
+}
+main{
+   padding: none;
+
+}
+
+h4{
+   color: #5087ed;
+   text-align: center;
+   text-shadow: 2px 2px 3px rgb(141, 139, 139);
+}
