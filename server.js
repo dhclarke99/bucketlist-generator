@@ -56,19 +56,3 @@ sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
 });
 
-
-
-
-
-// const request = require('request');
-
-// request.get({
-//   url: 'https://api.api-ninjas.com/v1/bucketlist',
-//   headers: {
-//     'X-Api-Key': 'YOUR_API_KEY'
-//   },
-// }, function(error, response, body) {
-//   if(error) return console.error('Request failed:', error);
-//   else if(response.statusCode != 200) return console.error('Error:', response.statusCode, body.toString('utf8'));
-//   else console.log(body)
-// });
