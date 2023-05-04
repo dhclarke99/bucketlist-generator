@@ -1,16 +1,18 @@
+{{log this}}
+{{#each listData as |List| }}
 <div class="column">
   <div class="col-auto">
-    <h4>{{name}}User's Bucket List!</h4>
+    <h4>{{List.title}}</h4>
   </div>
 </div>
-
+{{#each List.bucketListItems as |Item| }}
 <div class="row mt-4">
   <div class="col-md-6">
     <div class="container">
-      {{#each listData as |List| }}
+      
         <div id="BucketList">
                 <button type ="travel-lock" class="btn btn-primary">Travel</button>
-                <ul id="travel-list">{{List.title}}</ul>
+                <ul id="travel-list">{{Item.body}}</ul>
                 <br>
                  <button type ="travel-lock" class="btn btn-primary">Food</button>
                 <ul id ="food=list"></ul>
@@ -19,6 +21,7 @@
                 <ul id ="adrenaline-list"></ul>
                 <br>
         <div>
+      {{/each}}
       {{/each}}
 
         <button type="submit" class="btn btn-primary">Clear</button>
@@ -34,4 +37,7 @@
                 <ul id="travel-list"></ul>
       </div>
   </div>
+
+ 
+
 <script src="./js/homepage.js"></script>
