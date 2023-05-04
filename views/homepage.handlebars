@@ -1,7 +1,8 @@
 
 {{log this}}
-<button type="generate-lock" class="btn btn-outline-success" id="generate">Generate</button>
-      <ul id="generate"></ul>
+<br>
+      <button type="generate-lock" class="btn btn-outline-success" id="generate">Generate</button>
+      <div id="generatedItem"></div>
 {{#each listData as |List| }}
 {{!-- {{#each List.bucketListItems as |Item| }} --}}
 
@@ -48,12 +49,5 @@
         </div>
 
       </div>
-      <br>
-      <button type="generate-lock" class="btn btn-outline-success" id="generate">Generate</button>
-      <div id="generatedItem"></div>
-    </div>
-  </div>
-
-
-
+     
   <script src="./js/homepage.js"></script>
