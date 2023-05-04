@@ -2,7 +2,7 @@ const User = require('./user');
 const BucketList = require('./bucketlist');
 const BucketListItem = require('./bucketlist-item');
 
-User.hasOne(BucketList, {
+User.hasMany(BucketList, {
   foreignKey: 'user_id',
 });
 BucketList.belongsTo(User,{
