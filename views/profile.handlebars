@@ -1,52 +1,36 @@
 {{log this}}
 <div id="landing-page" style="visibility:visible">
   <input class="form-input" type="text" id="title-create" />
-  <button type="travel-lock" class="btn btn-primary" id="create" >Create List</button>
+  <button type="travel-lock" class="btn btn-primary" id="create">Create List</button>
 </div>
-<div id="list-generator" >
+<div id="list-generator">
   <div class="column">
     <div class="col-auto">
       <h3>{{name}}'s Bucket Lists:</h3>
     </div>
   </div>
   {{#each bucketLists as |list|}}
-<a href="/bucketlist/{{list.id}}">
-<p>{{list.title}}</p>
-</a>
-{{/each}}
+  <a href="/bucketlist/{{list.id}}">
+    <p>{{list.title}}</p>
+  </a>
+  {{/each}}
 
-      <div class="container">
-        <div id="profile-BucketList">
-          <button type="travel-lock" class="btn btn-primary" id="travel">Travel</button>
-          <ul id="travel-list"></ul>
-          <br>
-          <button type="travel-lock" class="btn btn-primary" id="food">Food</button>
-          <ul id="food-list"></ul>
-          <br>
-          <button type="travel-lock" class="btn btn-primary" id="adrenaline">Adrenaline</button>
-          <ul id="adrenaline-list"></ul>
-          <br>
-          <div>
-            <button type="submit" class="btn btn-primary">Create</button>
-            <button type="save" class="btn btn-primary">Save</button>
-            <button type="email" class="btn btn-primary">Email</button>
-
-          </div>
-          <div>
-            <button type="submit" class="btn btn-primary" id="logout">Logout</button>
-          </div>
-          <div id="profile-container">
-            <br>
-            </div>
-          <div>
-            <a href="/">
-          <button type="generate-lock" class="btn btn-primary" id="profile-generate">Return Home</button>
-          </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+</div>
+<div>
+  <button type="submit" class="btn btn-primary" id="logout">Logout</button>
+</div>
+<div id="profile-container">
+  <br>
+</div>
+<div>
+  <a href="/">
+    <button type="generate-lock" class="btn btn-primary" id="profile-generate">Return Home</button>
+  </a>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 <script src="./js/profile.js"></script>
 <script src="./js/logout.js"></script>
