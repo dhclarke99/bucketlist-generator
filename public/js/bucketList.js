@@ -188,8 +188,8 @@ const apiCall = async () => {
   document
     .querySelector('#generate')
     .addEventListener('click', apiCall);
-    document
-    .querySelector('#email')
-    .addEventListener('click', sendEmail);
+    // document
+    // .querySelector('#email')
+    // .addEventListener('click', sendEmail);
    
 
