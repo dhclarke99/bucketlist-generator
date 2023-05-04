@@ -48,7 +48,10 @@ const showPage = async (event) => {
 const travelCategory = async (event) => {
   event.preventDefault();
   console.log("click")
-  
+  const id = window.location.toString().split('/')[
+    window.location.toString().split('/').length - 1
+  ];
+  console.log(id)
   // Collect values from the login form
   const body = document.querySelector('#item-body').textContent;
   const category = "travel";
@@ -71,7 +74,7 @@ const travelCategory = async (event) => {
 
     if (response.ok) {
       // If successful, redirect the browser to the profile page
-      document.location.replace('/profile');
+      document.location.replace('/bucketlist/:id');
       const getLists = await fetch('/profile', {
         method: 'GET',
         // body: JSON.stringify({ email, password }),
