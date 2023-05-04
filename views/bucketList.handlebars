@@ -1,0 +1,72 @@
+{{log this}}
+
+<div class="column">
+  <div class="col-auto">
+    {{!-- {{#each listData as |List| }} --}}
+    <h4></h4>
+    
+  </div>
+</div>
+{{!-- {{#each List.bucketListItems as |Item| }} --}}
+<div class="row mt-4">
+  <div class="col-md-6">
+    <div class="container">
+      
+        <div id="BucketList">
+          <h4>{{title}}</h4>
+                              
+                <button type ="travel-lock" class="btn btn-primary" id="travel">Travel</button>
+                {{#each bucketListItems as |item| }}  
+                {{#if (ifCond item.category "travel")}}
+                <ul id="travel-list">{{item.body}}</ul>
+                {{/if}}
+                {{/each}}
+                
+                
+                <br>
+                <button type ="travel-lock" class="btn btn-primary" id="food">Food</button>
+                {{#each bucketListItems as |item| }}  
+                {{#if (ifCond item.category "food")}}
+                <ul id ="food-list">{{item.body}}</ul>
+                {{/if}}
+                {{/each}}
+                {{!-- {{#if (ifCond item.category "food")}}
+                <li>{{item.body}}</li>
+                {{/if}} --}}
+                <br> 
+                <button type ="travel-lock" class="btn btn-primary" id="adrenaline">Adrenaline</button>
+                {{#each bucketListItems as |item| }}  
+                {{#if (ifCond item.category "adrenaline")}}
+                <ul id ="adrenaline-list">{{item.body}}</ul>
+                {{/if}}
+                {{/each}}
+                {{!-- {{#if (ifCond item.category "adrenaline")}}
+                <li>{{item.body}}</li> --}}
+                <br>
+                {{!-- {{/if}}
+                {{/each}}                 --}}
+        <div>
+      {{!-- {{/each}} --}}
+      {{!-- {{/each}} --}}
+
+        <button type="submit" class="btn btn-primary">Clear</button>
+        <button type="email" class="btn btn-primary">Email</button>
+      </div>
+      </div>
+    </div>
+      <br>
+      <div id="container">
+        <br>
+        <button type ="generate-lock" class="btn btn-primary" id="generate">Generate</button>
+                <ul id="travel-list"></ul>
+      </div>
+      <div>
+            <a href="/">
+          <button type="generate-lock" class="btn btn-primary" id="profile-generate">Return Home</button>
+          </a>
+          </div>
+  </div>
+
+ 
+
+<script src="../js/bucketlist.js"></script>

@@ -1,14 +1,20 @@
 {{log this}}
-<div id="landing-page" style="visibility:visible;">
+<div id="landing-page" style="visibility:visible">
   <input class="form-input" type="text" id="title-create" />
   <button type="travel-lock" class="btn btn-primary" id="create" >Create List</button>
 </div>
-<div id="list-generator" style="visibility:hidden;">
+<div id="list-generator" >
   <div class="column">
     <div class="col-auto">
-      <h4>{{name}}'s Bucket List!</h4>
+      <h3>{{name}}'s Bucket Lists:</h3>
     </div>
   </div>
+  {{#each bucketLists as |list|}}
+<a href="/bucketlist/{{list.id}}">
+<p>{{list.title}}</p>
+</a>
+{{/each}}
+
       <div class="container">
         <div id="profile-BucketList">
           <button type="travel-lock" class="btn btn-primary" id="travel">Travel</button>
@@ -31,8 +37,11 @@
           </div>
           <div id="profile-container">
             <br>
-            <button type="generate-lock" class="btn btn-primary" id="profile-generate">Generate</button>
-            <ul id="travel-list"></ul>
+            </div>
+          <div>
+            <a href="/">
+          <button type="generate-lock" class="btn btn-primary" id="profile-generate">Return Home</button>
+          </a>
           </div>
         </div>
       </div>

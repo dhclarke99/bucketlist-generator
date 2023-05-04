@@ -55,6 +55,34 @@ router.get('/profile',  withAuth, async (req, res) => {
   }
 });
 
+router.get('/bucketlist/:id',  withAuth, async (req, res) => {
+  try {
+    // const userData = await User.findByPk(req.session.user_id);
+
+    const bucketListData = await BucketList.findByPk(req.params.id, {
+     
+      include: [
+        {
+          model: BucketListItem,
+        }
+      ],
+    });
+
+
+    const bucketList = bucketListData.get({ plain: true });
+    // const bucketLists = bucketListData.map(list => list.get({plain: true}))
+    // console.log(bucketLists)
+
+    res.render('bucketList',  {
+      ...bucketList,
+      logged_in: req.session.logged_in
+    });
+  } catch (err) {
+    console.log(err)
+    res.status(500).json(err);
+  }
+});
+
 
 
 router.get('/login', (req, res) => {
