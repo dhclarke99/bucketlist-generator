@@ -1,15 +1,19 @@
 {{log this}}
-<div id="landing-page" style="visibility:visible;">
+<div id="landing-page" style="visibility:visible">
   <input class="form-input" type="text" id="title-create" />
   <button type="travel-lock" class="btn btn-primary" id="create" >Create List</button>
 </div>
-<div id="list-generator" style="visibility:hidden;">
+<div id="list-generator" >
   <div class="column">
     <div class="col-auto">
       <h4>{{name}}'s Bucket List!</h4>
     </div>
   </div>
-
+{{#each bucketLists as |list|}}
+<a href="/bucketlist/{{list.id}}">
+<p>{{list.title}}</p>
+</a>
+{{/each}}
   <div class="row mt-4">
     <div class="col-md-6">
       <div class="container">
