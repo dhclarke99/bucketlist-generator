@@ -1,41 +1,40 @@
 {{log this}}
-<div class=container>
 <div class=card1>
 <br>
-      <button type="generate-lock" class="btn btn-outline-success" id="generate">Generate</button>
+      <button type="generate-lock" class="btn btn-success" id="generate">Generate</button>
       <div id="generatedItem"></div>
       </div>
-      </div>
+      
 {{#each listData as |List| }}
-{{!-- {{#each List.bucketListItems as |Item| }} --}}
-
-
 <br>
 
-      <div class="card2">
+      <div class=card2>
       <div id="BucketList">
-        <h4>{{List.title}}</h4>
-
-        <button type="travel-lock" class="btn btn-primary">Travel</button>
+        <h2>{{List.title}}</h2>
+        <section>
+        <h3>Travel<h3>
         {{#each List.bucketListItems as |item| }}
         {{#if (ifCond item.category "travel")}}
+        </section>
+         <section>
         <ul id="travel-list">{{item.body}}</ul>
         {{/if}}
         {{/each}}
-
-
+        </section>
         <br>
-        <button type="travel-lock" class="btn btn-primary">Food</button>
+        <section>
+        <h3>Food</h3>
         {{#each List.bucketListItems as |item| }}
         {{#if (ifCond item.category "food")}}
+        
+        <section>
         <ul id="food-list">{{item.body}}</ul>
         {{/if}}
         {{/each}}
-        {{!-- {{#if (ifCond item.category "food")}}
-        <li>{{item.body}}</li>
-        {{/if}} --}}
+      
+        </section>
         <br>
-        <button type="travel-lock" class="btn btn-primary">Adrenaline</button>
+        <h3>Adrenaline</h3>
         {{#each List.bucketListItems as |item| }}
         {{#if (ifCond item.category "adrenaline")}}
         <ul id="adrenaline-list">{{item.body}}</ul>
@@ -45,8 +44,11 @@
         <li>{{item.body}}</li> --}}
         </div>
         </div>
+        </div>
         <br>
           {{/each}}
+          <div class="containerL">
+        <div class="card3">
           <a href="/login">
           <button type="register" class="btn btn-primary">Login</button>
           </a>
@@ -54,7 +56,8 @@
           <button type="register" class="btn btn-primary">View Profile</button>
           </a>
         </div>
-
-      </div>
+        </section>
+</div>
+  
      
   <script src="./js/homepage.js"></script>
