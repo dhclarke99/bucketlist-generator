@@ -68,6 +68,7 @@ p{
    align-content: space-evenly;
    justify-content: center;
    padding: 10px;
+   margin-bottom: 20px;
 
 }
 .card4{
@@ -94,6 +95,22 @@ p{
    justify-content:center;
    padding: 10px;
 }
+.card7{
+   border-color:#5087ed;
+   border-style: solid;
+   border-radius: 10px;
+   display:flex;
+   justify-content:center;
+   padding: 10px;
+}
+.card8{
+   border-color:#5087ed;
+   border-style: solid;
+   border-radius: 10px;
+   display:flex;
+   justify-content:center;
+   padding: 10px;
+}
 .form.signup-form{
    margin-top: 10px;
 }
@@ -102,6 +119,10 @@ p{
 
 }
 .form-group{
+   display:flex;
+   justify-content:center;
+}
+.container2{
    display:flex;
    justify-content:center;
 }
@@ -135,4 +156,19 @@ p{
 }
 #profile-generate{
    margin-left: 50px;
+}
+#email{
+   margin-left:20px
+}
+#adrenaline{
+   margin-left:70px
+}
+#food{
+   margin-left:85px
+}
+#travel{
+   margin-left:85px
+}
+#clear{
+   margin-left:25px
 }
