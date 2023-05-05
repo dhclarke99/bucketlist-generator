@@ -3,7 +3,6 @@
 
 ## Description
 
-Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
 
 The motivation behind building this application was the desire to create something for users who are stuck in the rut of life and need some inspiration to break out of their daily routine. The bucketlist generator is a unique app that can spark the users imagination and drive them to pursue life changing events or activities.
 
