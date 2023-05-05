@@ -26,7 +26,7 @@ hbs.handlebars.registerHelper('ifCond', function(v1, v2, options) {
 });
 
 const sess = {
-  secret: 'Super secret secret',
+  secret: process.env.SESSION_SECRET,
   cookie: {
     maxAge: 300000,
     httpOnly: true,
