@@ -98,7 +98,7 @@ const apiCall = async () => {
     const response = await fetch('https://api.api-ninjas.com/v1/bucketlist', {
       method: 'GET',
   
-      headers: { 'X-Api-Key': 'g4eBJJ1vStCoSNn4Hn+3Qg==dciOZWtnf9XNVu4g' },
+      headers: { 'X-Api-Key': process.env.API_KEY },
       contentType: 'application/json',
   
     });
