@@ -1,9 +1,3 @@
-
-
-
-
-
-
 const travelCategory = async (event) => {
   event.preventDefault();
   console.log("click")
@@ -185,6 +179,30 @@ const apiCall = async () => {
       .addEventListener('click', adrenalineCategory);
   };
   
+  const shareEmail = async () => {
+    console.log("click");
+    const email = document.querySelector("#enter-email");
+    const emailBody = JSON.stringify({"email": email.value})
+    const response = await fetch('/api/email',{
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: emailBody
+    });
+   
+    if (response.ok) {
+      console.log(`email successfully sent to ${email.value}`)
+    } else {
+      console.log(`Error! ${response}`)
+    }
+  
+  }
+  
+  const emailButton = document.querySelector('#email')
+  
+  emailButton.addEventListener('click', async function() {
+    shareEmail();
+  })
+
   document
     .querySelector('#generate')
     .addEventListener('click', apiCall);

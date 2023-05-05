@@ -24,7 +24,6 @@ const apiCall = async () => {
       }
   
   };
-  
-  document
+    document
     .querySelector('#generate')
     .addEventListener('click', apiCall);
