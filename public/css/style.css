@@ -161,22 +161,25 @@ p{
    margin-left:20px
 }
 #adrenaline{
-   margin-left:166px
+   margin-left:135px
 }
 #adrenaline-list{
    text-align: center;
+   padding: 0px;
 }
 #food{
-   margin-left:185px
+   margin-left:155px
 }
 #food-list{
    text-align: center;
+   padding: 0px;
 }
 #travel{
-   margin-left:185px
+   margin-left:155px
 }
 #travel-list{
    text-align: center;
+   padding: 0px;
 }
 #clear{
    margin-left:25px
