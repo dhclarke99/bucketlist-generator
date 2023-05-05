@@ -1,31 +1,41 @@
-# Bucketlist-Generator
+
+# BucketList Generator
 
 ## Description
 
-This is the 1st project of team Andrew Dean, David Clarke, and Lukas Durkin for Penn Full Stack Web Development. Bucketlist generator is randomized bucket list generator meant to motivate the user to get up and experience the world.
+Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
+
+The motivation behind building this application was the desire to create something for users who are stuck in the rut of life and need some inspiration to break out of their daily routine. The bucketlist generator is a unique app that can spark the users imagination and drive them to pursue life changing events or activities.
+
+Through building this project, our team was able to build our individual skills with express js, handlebars, and node js, as well as gain experience in collaboration with full stack developers.
+
 
 ## Installation
 
-N/A
+No installation required.
 
 ## Usage
 
-To navigate the Generator, the user can generate to see new bucket list items and log-in to begin selecting items they want to put in their list. by clicking the categories they want to put their items in users can quickly make unique and fun lists to share with friends via email.
+Click this [link](https://pacific-beach-42449.herokuapp.com/) to access the application. After the page loads, scroll to the bottom and click the login button. Sign up with the required fields if you are a new user, or fill out the login section if you are a returning user. You will be met with the following page:
 
-![screenshot of generator](./assets/Screenshot%202023-05-05%20130519.jpg)
+ ![Screenshot of profile page](./assets/Screen%20Shot%202023-05-05%20at%201.15.25%20PM.png)
 
-[Program](https://sheltered-sands-17802.herokuapp.com/)
+ Click on any of the hyperlinked lists to add to them or enter a list name and click the create list button to create a brand new list.
+
+ Once you click on the list you will be taken to the editor page where you can edit and share the bucketlist. Click the "generate" button to generate bucketlist ideas and click either the "Travel", "Food", or "Adrenaline" category buttons to add the idea to the correct category.
+
+ ![Screenshot of list editor page](./assets/generateList-page.png)
+
+ Your bucketlist will be saved and posted to the homepage!
+
+
+
 ## Credits
-We utilized the  [Node Mailer] (https://nodemailer.com/about/) for this project.
-We utilized the  [Bucket List Generator API] (https://api-ninjas.com/api/bucketlist) for this project.
-We utilized [Font awesome] (https://fontawesome.com/search?q=sandwich&o=r&m=free) for this project.
+
+Collaborators:
+
+[Lukas Durkin](https://github.com/DukeLurkin)
+[Andrew Dean](https://github.com/0Adean0)
 
 
-W3 Schools
- 
- 
- Leif and Fred
 
-## License
-
-MIT
