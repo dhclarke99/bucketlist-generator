@@ -23,7 +23,7 @@ const loginFormHandler = async (event) => {
         });
       } else {
         console.log("error")
-        alert(response.statusText);
+        alert("incorrect email or password");
       }
     }
   };
