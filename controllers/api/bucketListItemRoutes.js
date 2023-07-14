@@ -34,5 +34,18 @@ router.post('/', async (req, res) => {
     }
   });
 
+  // *deleting all bucket list items
+router.delete('/', async (req, res) => {
+  try {
+      console.log(req.body)
+    const bucketListItemData = await BucketListItem.destroy();
+
+    res.status(200).json(bucketListItemData);
+  } catch (err) {
+      console.log(err)
+    res.status(400).json(err);
+  }
+});
+
 
   module.exports = router

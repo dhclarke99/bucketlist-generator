@@ -1,5 +1,8 @@
 const userInput = document.querySelector(".user-input")
 
+
+
+
 const travelCategory = async (event) => {
   event.preventDefault();
   console.log("click")
