@@ -3,9 +3,11 @@ const userInput = document.querySelector(".user-input")
 const travelCategory = async (event) => {
   event.preventDefault();
   console.log("click")
- 
-  // Collect values from the login form
-  const body = document.querySelector('#item-body').textContent;
+  
+  if (!userInput.value) {
+    const body = document.querySelector('#item-body').textContent;
+     // Collect values from the login form
+  
   const category = "travel";
   const id = window.location.toString().split('/')[
     window.location.toString().split('/').length - 1
@@ -34,25 +36,64 @@ const travelCategory = async (event) => {
       
       // If successful, redirect the browser to the profile page
       document.location.replace(`/bucketlist/${id}`);
-      // const getLists = await fetch('/profile', {
-      //   method: 'GET',
-      //   // body: JSON.stringify({ email, password }),
-      //   headers: { 'Content-Type': 'application/json' },
-      // });
       console.log(id)
     } else {
       console.log("error")
       alert(response.statusText);
     }
   }
+
+  
+  } else if (userInput.value) {
+    const body = userInput.value;
+    // Collect values from the login form
+ 
+ const category = "travel";
+ const id = window.location.toString().split('/')[
+   window.location.toString().split('/').length - 1
+ ];
+ const bucket_list_id = id;
+
+ console.log(body);
+ console.log(category);
+ console.log(bucket_list_id);
+
+
+ const requestBody = JSON.stringify({ body, category, bucket_list_id: parseInt(bucket_list_id) });
+ console.log(requestBody);
+ if (body && category) {
+   // Send a POST request to the API endpoint
+   const response = await fetch('/api/bucketlistitems', {
+     method: 'POST',
+     body: requestBody,
+     headers: { 'Content-Type': 'application/json' },
+   });
+
+   console.log(response)
+
+   if (response.ok) {
+     
+     
+     // If successful, redirect the browser to the profile page
+     document.location.replace(`/bucketlist/${id}`);
+     console.log(id)
+   } else {
+     console.log("error")
+     alert(response.statusText);
+   }
+ }
+  }
+ 
+ 
 }
 const foodCategory = async (event) => {
   event.preventDefault();
   console.log("click")
- 
-  console.log(userInput.textContent)
-  // Collect values from the login form
-  const body = document.querySelector('#item-body').textContent;
+  
+  if (!userInput.value) {
+    const body = document.querySelector('#item-body').textContent;
+     // Collect values from the login form
+  
   const category = "food";
   const id = window.location.toString().split('/')[
     window.location.toString().split('/').length - 1
@@ -81,11 +122,6 @@ const foodCategory = async (event) => {
       
       // If successful, redirect the browser to the profile page
       document.location.replace(`/bucketlist/${id}`);
-      // const getLists = await fetch('/profile', {
-      //   method: 'GET',
-      //   // body: JSON.stringify({ email, password }),
-      //   headers: { 'Content-Type': 'application/json' },
-      // });
       console.log(id)
     } else {
       console.log("error")
@@ -94,6 +130,47 @@ const foodCategory = async (event) => {
   }
 
   
+  } else if (userInput.value) {
+    const body = userInput.value;
+    // Collect values from the login form
+ 
+ const category = "food";
+ const id = window.location.toString().split('/')[
+   window.location.toString().split('/').length - 1
+ ];
+ const bucket_list_id = id;
+
+ console.log(body);
+ console.log(category);
+ console.log(bucket_list_id);
+
+
+ const requestBody = JSON.stringify({ body, category, bucket_list_id: parseInt(bucket_list_id) });
+ console.log(requestBody);
+ if (body && category) {
+   // Send a POST request to the API endpoint
+   const response = await fetch('/api/bucketlistitems', {
+     method: 'POST',
+     body: requestBody,
+     headers: { 'Content-Type': 'application/json' },
+   });
+
+   console.log(response)
+
+   if (response.ok) {
+     
+     
+     // If successful, redirect the browser to the profile page
+     document.location.replace(`/bucketlist/${id}`);
+     console.log(id)
+   } else {
+     console.log("error")
+     alert(response.statusText);
+   }
+ }
+  }
+ 
+ 
 }
 
 const adrenalineCategory = async (event) => {
