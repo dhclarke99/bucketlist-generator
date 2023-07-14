@@ -161,7 +161,7 @@ const apiCall = async () => {
   
     // Check if a child element exists
     if (listContainer.querySelector('h2')) {
-        listContainer.querySelector('h2').textContent = data.item;
+      listContainer.querySelector('h2').textContent = data.item;
       } else {
         const listElement = document.createElement('div');
         

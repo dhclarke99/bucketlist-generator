@@ -1,76 +1,80 @@
 {{log this}}
 <div class="container">
-          <div class="card7">
-        <div id="BucketList">
-          <h4>{{title}}</h4>
-              <div class="containe2">
-                <button type ="travel-lock" class="btn btn-primary" id="travel">Travel</button>
-                <br>
-                {{#each bucketListItems as |item| }}  
-                {{#if (ifCond item.category "travel")}}
-                <ul id="travel-list">{{item.body}}</ul>
-                {{/if}}
-                {{/each}}
-   
-                
-                <br>
+  <div class="card7">
+    <div id="BucketList">
+      <h4>{{title}}</h4>
+      <div class="containe2">
+        <button type="travel-lock" class="btn btn-primary" id="travel">Travel</button>
+        <br>
+        {{#each bucketListItems as |item| }}
+        {{#if (ifCond item.category "travel")}}
+        <ul id="travel-list">{{item.body}}</ul>
+        {{/if}}
+        {{/each}}
 
-                <button type ="travel-lock" class="btn btn-primary" id="food">Food</button>
-                <br>
-                {{#each bucketListItems as |item| }}  
-                {{#if (ifCond item.category "food")}}
-                <ul id ="food-list">{{item.body}}</ul>
-                {{/if}}
-                {{/each}}
-                <br> 
-                <button type ="travel-lock" class="btn btn-primary" id="adrenaline">Adrenaline</button>
-                <br>
-                {{#each bucketListItems as |item| }}  
-                {{#if (ifCond item.category "adrenaline")}}
-                <ul id ="adrenaline-list">{{item.body}}</ul>
-                {{/if}}
-                {{/each}}
-                
-                <br>
 
-   
-              </div>
-        </div>
-          </div>
+        <br>
+
+        <button type="travel-lock" class="btn btn-primary" id="food">Food</button>
+        <br>
+        {{#each bucketListItems as |item| }}
+        {{#if (ifCond item.category "food")}}
+        <ul id="food-list">{{item.body}}</ul>
+        {{/if}}
+        {{/each}}
+        <br>
+        <button type="travel-lock" class="btn btn-primary" id="adrenaline">Adrenaline</button>
+        <br>
+        {{#each bucketListItems as |item| }}
+        {{#if (ifCond item.category "adrenaline")}}
+        <ul id="adrenaline-list">{{item.body}}</ul>
+        {{/if}}
+        {{/each}}
+
+        <br>
+
+
+      </div>
+    </div>
+  </div>
 </div>
 <br>
 <div class="container">
-          <div class="card7">
-        <button type="submit" class="btn btn-danger" id="clear">Clear</button>
-</div>
-</div>
-
-        
-
-          <h3>Share your Bucket List:</h3>
-          <div class="container">
-          <div class="card8">
-          <input class="form-input" type="email" id="enter-email" placeholder="Enter Recipient's Email"/>
-        
-        <button type="email" class="btn btn-primary" id="email">Email</button>
-      </div>
-      </div>
-
-      <br>
-      <div id="container">
-        <br>
-        <div class="container">
-          <div class="card8">
-        <button type ="generate-lock" class="btn btn-success" id="generate">Generate</button>
-                <ul id="travel-list"></ul>
-      <div>
-            <a href="/">
-          <button type="generate-lock" class="btn btn-secondary" id="profile-generate">Return Home</button>
-          </a>
-          </div>
-          </div>
+  <div class="card7">
+    <button type="submit" class="btn btn-danger" id="clear">Clear</button>
   </div>
+</div>
 
- 
+
+
+<h3>Share your Bucket List:</h3>
+<div class="container">
+  <div class="card8">
+    <input class="form-input" type="email" id="enter-email" placeholder="Enter Recipient's Email" />
+
+    <button type="email" class="btn btn-primary" id="email">Email</button>
+  </div>
+</div>
+
+<br>
+<div id="container">
+  <br>
+  <div class="container">
+    <div class="card8">
+      <button type="generate-lock" class="btn btn-success" id="generate">Generate</button>
+      <ul id="travel-list"></ul>
+      <div>
+        <a href="/">
+          <button type="generate-lock" class="btn btn-secondary" id="profile-generate">Return Home</button>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div>
+    <input>
+  </div>
+</div>
+
+
 
 <script src="/js/bucketList.js"></script>
