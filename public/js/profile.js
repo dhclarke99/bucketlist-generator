@@ -27,11 +27,7 @@ console.log(title)
 }
 
 const showPage = async (event) => {
-  event.preventDefault();
-  console.log("click")
-  console.log(listGenerator)
-
-  
+  event.preventDefault(); 
     createList()
 };
 
