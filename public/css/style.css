@@ -129,6 +129,10 @@ p{
    border-radius: 4px; /* Rounded corners */
 }
 
+.delete-btn:hover {
+   background-color: #e53935; /* Darker red background color on hover */
+ }
+
 
 .form-group{
    display:flex;
