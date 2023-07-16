@@ -7,42 +7,36 @@
       
 {{#each listData as |List| }}
 <br>
-
-      <div class=card2>
+      <div class="card2">
       <div id="BucketList">
         <h2>{{List.title}}</h2>
-        <section>
-        <h3>Travel<h3>
+        <section class="category-div">
+        <h3>Travel</h3>
         {{#each List.bucketListItems as |item| }}
         {{#if (ifCond item.category "travel")}}
-        </section>
-         <section>
         <ul id="travel-list">{{item.body}}</ul>
         {{/if}}
         {{/each}}
         </section>
-        <br>
-        <section>
+      
+        <section class="category-div">
         <h3>Food</h3>
         {{#each List.bucketListItems as |item| }}
         {{#if (ifCond item.category "food")}}
-        
-        <section>
         <ul id="food-list">{{item.body}}</ul>
         {{/if}}
         {{/each}}
-      
         </section>
-        <br>
+      
+    
+       <section>
         <h3>Adrenaline</h3>
         {{#each List.bucketListItems as |item| }}
         {{#if (ifCond item.category "adrenaline")}}
         <ul id="adrenaline-list">{{item.body}}</ul>
         {{/if}}
         {{/each}}
-        {{!-- {{#if (ifCond item.category "adrenaline")}}
-        <li>{{item.body}}</li> --}}
-        </div>
+        </section>
         </div>
         </div>
         <br>
