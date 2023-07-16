@@ -53,12 +53,19 @@
 <br>
 <h3>Custom List Item</h3>
 <div class="container">
- <div class = "card7">
+ <div class = "card7 special">
     <input class="user-input" placeholder="Write your own idea here!">
+     <div class="container" id="container">
+    
+      <button type="generate-lock" class="btn btn-success" id="generate">Generate</button>
+      <ul id="travel-list"></ul>
+    
   </div>
+  </div>
+ 
   </div>
 
-<h3>Select Category</h3>
+<h3>Select Item Category</h3>
 <div class = "card7">
  <button type="generate-lock" class="btn btn-secondary" id="travel">Travel</button>
   <button type="generate-lock" class="btn btn-secondary" id="food">Food</button>
@@ -68,17 +75,7 @@
 
 <br>
 <h3>Generate Random List Item</h3>
-  <div class="container" id="container">
-    <div class="card8">
-      <button type="generate-lock" class="btn btn-success" id="generate">Generate</button>
-      <ul id="travel-list"></ul>
-      <div>
-        <a href="/">
-          <button type="generate-lock" class="btn btn-secondary" id="profile-generate">Return Home</button>
-        </a>
-      </div>
-    </div>
-  </div>
+  
 
   <h3>Share your Bucket List:</h3>
 <div class="container">
@@ -86,6 +83,11 @@
     <input class="form-input" type="email" id="enter-email" placeholder="Enter Recipient's Email" />
 
     <button type="email" class="btn btn-primary" id="email">Email</button>
+    <div>
+        <a href="/">
+          <button type="generate-lock" class="btn btn-secondary" id="profile-generate">Return Home</button>
+        </a>
+      </div>
   </div>
 </div>
  

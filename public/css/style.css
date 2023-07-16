@@ -171,6 +171,11 @@ p{
 .form-group2{
    margin-left: 28px;
 }
+.card7.special{
+   display: flex;
+   flex-direction: column;
+    align-items: center;
+}
 
 #landing-page{
    display:flex;
