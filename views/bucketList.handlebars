@@ -2,8 +2,8 @@
 <div class="container">
   <div class="card7">
     <div id="BucketList">
-      <h4>{{title}}</h4>
-      <div class="container2">
+      <h2>{{title}}</h2>
+      <div class="container">
         <button type="travel-lock" class="btn btn-primary" id="travel">Travel</button>
         <br>
         {{#each bucketListItems as |item| }}
@@ -70,7 +70,7 @@
 
 <br>
 <h3>Generate Random List Item</h3>
-  <div class="container">
+  <div class="container" id="container">
     <div class="card8">
       <button type="generate-lock" class="btn btn-success" id="generate">Generate</button>
       <ul id="travel-list"></ul>
