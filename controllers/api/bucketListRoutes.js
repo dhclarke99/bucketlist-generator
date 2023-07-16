@@ -101,4 +101,19 @@ router.post('/logout', (req, res) => {
   }
 });
 
+router.delete('/:id', async (req, res) => {
+  try {
+    const bucketListData = await BucketList.destroy({
+      where: {
+        id: req.params.id,
+      },
+    });
+
+    res.status(200).json(bucketListData);
+  } catch (err) {
+      console.log(err)
+    res.status(400).json(err);
+  }
+});
+
 module.exports = router
