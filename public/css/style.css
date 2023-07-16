@@ -119,6 +119,17 @@ p{
    margin-top: 10px;   
 
 }
+.delete-btn {
+   background-color: #f44336; /* Red background color */
+   color: #fff; /* White text color */
+   border: none; /* No border */
+   padding: 8px 16px; /* Padding around the text */
+   font-size: 14px; /* Font size of the text */
+   cursor: pointer; /* Cursor style on hover */
+   border-radius: 4px; /* Rounded corners */
+}
+
+
 .form-group{
    display:flex;
    justify-content:center;
