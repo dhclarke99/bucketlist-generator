@@ -133,6 +133,10 @@ p{
    background-color: #e53935; /* Darker red background color on hover */
  }
 
+ .delete-btn:active {
+   background-color: #c62828; /* Even darker red background color when button is pressed */
+ }
+
 
 .form-group{
    display:flex;
