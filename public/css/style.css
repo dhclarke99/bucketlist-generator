@@ -158,6 +158,12 @@ p{
    margin-top: 8px;
    
 }
+.bucket-lists{
+   display: flex;
+   flex-direction: row;
+   margin-top: 8px;
+   
+}
 .container{
    display: flex;
    flex-direction: column;
@@ -191,6 +197,11 @@ p{
     align-items: center;
 }
 #container{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+#list-generator{
    display: flex;
    flex-direction: column;
    align-items: center;

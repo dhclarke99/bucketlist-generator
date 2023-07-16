@@ -9,9 +9,16 @@
       <h3>{{name}}'s Bucket Lists:</h3>
     </div>
   </div>
-  {{#each bucketLists as |list|}}
-  <a href="/bucketlist/{{list.id}}"><h2>{{list.title}}</h2></a>
+ {{#each bucketLists as |list|}}
+ <div class="bucket-lists">
+  <a href="/bucketlist/{{list.id}}">
+  <h2>{{list.title}}</h2>
+  </a>
+  <button class="delete-btn" id="{{list.id}}" >x</button>
+  </div>
   {{/each}}
+  
+ 
 
 </div>
 <div>
