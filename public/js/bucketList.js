@@ -3,7 +3,10 @@ const deleteBtn = document.querySelectorAll(".delete-btn")
 
 
 
-const deleteItem = async () => {
+const deleteItem = async (event) => {
+  event.preventDefault();
+  const bucket_list_item_id = event.target.id
+
   
 }
 
