@@ -9,7 +9,7 @@
         {{#each bucketListItems as |item| }}
         {{#if (ifCond item.category "travel")}}
         <ul id="travel-list">{{item.body}}
-          <button id ="{{item.id}}">Delete Item</button>
+          <button class="delete-btn" id ="{{item.id}}">Delete Item</button>
         </ul>
         
         {{/if}}
@@ -23,7 +23,7 @@
         {{#each bucketListItems as |item| }}
         {{#if (ifCond item.category "food")}}
         <ul id="food-list">{{item.body}}
-          <button>Delete Item</button>
+          <button class="delete-btn" id ="{{item.id}}">Delete Item</button>
         </ul>
         
         {{/if}}
@@ -34,7 +34,7 @@
         {{#each bucketListItems as |item| }}
         {{#if (ifCond item.category "adrenaline")}}
         <ul id="adrenaline-list">{{item.body}}
-          <button>Delete Item</button>
+          <button class="delete-btn" id ="{{item.id}}">Delete Item</button>
         </ul>
         
         {{/if}}

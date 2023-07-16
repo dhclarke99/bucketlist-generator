@@ -1,6 +1,9 @@
 const userInput = document.querySelector(".user-input")
+const deleteButton = document.querySelector()
 
+const deleteItem = async (event) => {
 
+}
 
 
 const travelCategory = async (event) => {
