@@ -23,8 +23,10 @@
         <br>
         {{#each bucketListItems as |item| }}
         {{#if (ifCond item.category "food")}}
+        <div class ="list-items">
         <ul id="food-list">{{item.body}}</ul>
         <button class="delete-btn" id ="{{item.id}}">Delete Item</button>
+        </div>
         
         {{/if}}
         {{/each}}
@@ -33,8 +35,10 @@
         <br>
         {{#each bucketListItems as |item| }}
         {{#if (ifCond item.category "adrenaline")}}
+        <div class ="list-items">
         <ul id="adrenaline-list">{{item.body}}</ul>
         <button class="delete-btn" id ="{{item.id}}">Delete Item</button>
+        </div>
         
         {{/if}}
         {{/each}}

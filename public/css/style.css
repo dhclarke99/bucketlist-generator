@@ -127,6 +127,7 @@ p{
    font-size: 14px; /* Font size of the text */
    cursor: pointer; /* Cursor style on hover */
    border-radius: 4px; /* Rounded corners */
+   margin-left: 40px;
 }
 
 .delete-btn:hover {
@@ -146,6 +147,8 @@ p{
    display: flex;
    flex-direction: row;
    justify-content: flex-end;
+   margin-top: 12px;
+   
 }
 .container4{
    padding: 0;
