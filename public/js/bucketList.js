@@ -1,9 +1,15 @@
 const userInput = document.querySelector(".user-input")
-const deleteButton = document.querySelector()
+const deleteBtn = document.querySelectorAll(".delete-btn")
 
-const deleteItem = async (event) => {
 
+
+const deleteItem = async () => {
+  
 }
+
+deleteBtn.forEach(btn => {
+  btn.addEventListener("click", deleteItem)
+})
 
 
 const travelCategory = async (event) => {
