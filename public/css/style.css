@@ -123,11 +123,11 @@ p{
    background-color: #f44336; /* Red background color */
    color: #fff; /* White text color */
    border: none; /* No border */
-   padding: 8px 16px; /* Padding around the text */
    font-size: 14px; /* Font size of the text */
    cursor: pointer; /* Cursor style on hover */
    border-radius: 4px; /* Rounded corners */
    margin-left: 40px;
+   height: 25px;
 }
 
 .delete-btn:hover {
@@ -146,13 +146,15 @@ p{
 .list-items{
    display: flex;
    flex-direction: row;
-   justify-content: flex-end;
-   align-items: center;
-   margin-top: 12px;
+   justify-content: space-between;
+   margin-top: 8px;
    
 }
 .container4{
    padding: 0;
+}
+.user-input{
+   width: 200px;
 }
 
 .btn-primary{
