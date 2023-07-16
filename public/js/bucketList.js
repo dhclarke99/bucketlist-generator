@@ -7,7 +7,30 @@ const deleteItem = async (event) => {
   event.preventDefault();
   const bucket_list_item_id = event.target.id
 
-  
+  if (bucket_list_item_id) {
+    // Send a POST request to the API endpoint
+    const response = await fetch(`/api/bucketlistitems/${bucket_list_item_id}`, {
+      method: 'DELETE',
+      headers: { 'Content-Type': 'application/json' },
+    });
+
+    const bucket_list_id = window.location.toString().split('/')[
+      window.location.toString().split('/').length - 1
+    ];
+
+    console.log(response)
+
+    if (response.ok) {
+      
+      
+      // If successful, redirect the browser to the bucketlist page
+      document.location.replace(`/bucketlist/${bucket_list_id}`);
+      console.log(id)
+    } else {
+      console.log("error")
+      alert(response.statusText);
+    }
+  }
 }
 
 deleteBtn.forEach(btn => {
