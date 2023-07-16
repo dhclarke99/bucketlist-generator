@@ -162,11 +162,17 @@ p{
    display: flex;
    flex-direction: row;
    margin-top: 8px;
+   justify-content: flex-end;
    
 }
 .container{
    display: flex;
    flex-direction: column;
+}
+.profile-container{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
 }
 .container4{
    padding: 0;

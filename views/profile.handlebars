@@ -1,14 +1,16 @@
 {{log this}}
+<div class = "profile-container">
 <div id="landing-page" style="visibility:visible">
   <input class="form-input" type="text" id="title-create" />
   <button type="travel-lock" class="btn btn-primary" id="create">Create List</button>
 </div>
-<div id="list-generator">
+
   <div class="column">
-    <div class="col-auto">
+  
       <h3>{{name}}'s Bucket Lists:</h3>
-    </div>
+  
   </div>
+  <div>
  {{#each bucketLists as |list|}}
  <div class="bucket-lists">
   <a href="/bucketlist/{{list.id}}">
@@ -17,10 +19,11 @@
   <button class="delete-btn" id="{{list.id}}" >x</button>
   </div>
   {{/each}}
+  </div>
   
  
 
-</div>
+
 <div>
  <div class="container">
     <div class="card6"> 
@@ -35,6 +38,7 @@
   </div>
 </div>
  </div>
+</div>
 </div>
 <script src="./js/profile.js"></script>
 <script src="./js/logout.js"></script>
